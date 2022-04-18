@@ -1,0 +1,112 @@
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--primaryColor);
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    margin: 0px 160px;
+}
+
+.logo_text{
+    color: var(--secondaryColor);
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.navbar_options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    gap: 5px;
+}
+
+.options_text{
+    color: var(--secondaryColor);
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    transition-property: border;
+    transition-duration: 1.2s;
+    text-align: center;
+    font-family: var(--secondaryFont);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.options_text--active{
+    border-bottom: 2px solid var(--secondaryColor);
+}
+
+.options_text:hover{
+    border-bottom: 2px solid var(--secondaryColor);
+}
+
+.navbar_icon{
+    display: none;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:1200px) {
+    
+    .navbar{
+        margin: 0px 100px;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .navbar{
+        margin:0px 30px
+    }
+
+    .navbar_options{
+        position: fixed;
+        top: 80px;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: var(--primaryColor);
+        transition: all 1s ease-out;
+        gap: 30px;
+    }
+
+    .navbar_options.mostrar{
+        top: 80px;
+        left: 0px;
+    }
+
+    .options_text{
+        font-size: 1.5rem;
+    }
+
+    .options_text--active{
+        font-weight: bold;
+    }
+
+    .options_text:hover, .options_text--active{
+        border: 1px solid transparent;
+    }
+
+    .navbar_icon{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        font-size: 30px;
+        height: 70px;
+        z-index: 10;
+    }
+}

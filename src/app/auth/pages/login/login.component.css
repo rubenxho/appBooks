@@ -1,0 +1,77 @@
+.localContainer{
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), url("../../../../assets/img/login.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.form{
+    box-shadow: 1px 1px 2px 3px rgba(255, 253, 253, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px 80px 50px;
+    border-radius: 5px;
+    gap: 30px;
+}
+
+.title{
+    color: var(--secondaryColor);
+    border-bottom: 3px solid var(--secondaryColor);
+    padding: 0px 20px 10px 20px;
+    margin-bottom: 20px;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.field__text{
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.02);
+    font-size: 12px;
+    color: white;
+}
+
+.event{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.alert{
+    font-size: 12px;
+    color: red
+}
+
+.button{
+    border-radius: 5px;
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    padding: 8px 30px;
+    border: none;
+}
+
+.button:hover{
+    background-color: var(--primaryColorShadow);
+}
+
+.button:active{
+    background-color: var(--primaryColorShadow);
+    box-shadow: 1px 1px 1px 1px rgba(127, 126, 126, 0.5);
+}

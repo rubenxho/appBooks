@@ -1,0 +1,17 @@
+<section class="mainContainer localContainer">
+
+    <form class="form" [formGroup]="myForm" autocomplete="off">
+        <div class="title">
+            <h1><i class="fa-solid fa-book"></i> Books</h1>
+        </div>
+        <div class="field">
+            <input class="field__text" placeholder="Email" formControlName="email"> 
+            <input class="field__text" type="password" placeholder="Password" formControlName="password"> 
+        </div>
+        <div class="event">
+            <p *ngIf="hidden" class="alert">{{message}}</p>
+            <button class="button" type="reset" on-click="login()">Iniciar Sesion</button>
+        </div>
+    </form>
+
+</section>    

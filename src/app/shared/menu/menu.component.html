@@ -1,0 +1,20 @@
+<header class="header">
+    <nav class="navbar">
+        
+        <div class="navbar_logo">
+            <a class="logo_text"> AppBooks </a>
+        </div>
+        
+        <div class="navbar_options" #menuResponsive>
+            <!-- <a class="options_text" on-click="desplegarMenu()"> Home</a> -->
+            <a class="options_text" routerLink="/login" routerLinkActive="options_text--active" on-click="desplegarMenu()"> Login</a>
+            <a class="options_text" routerLink="/register" routerLinkActive="options_text--active" on-click="desplegarMenu()"> Registro</a>
+            <!-- <a class="options_text" on-click="desplegarMenu()"> Contacto</a> -->
+        </div>
+
+        <div class="navbar_icon">
+            <a on-click="desplegarMenu()"><i class="fas fa-bars"></i></a>
+        </div>
+
+    </nav>
+</header>
