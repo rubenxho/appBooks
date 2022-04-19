@@ -1,0 +1,9 @@
+<div class="card"> 
+    <figure class="image">
+        <img class="image__photo" src="{{book.image}}" alt="picture">
+    </figure>
+    <div class="card__body">
+        <p class="card__title">{{book.name}}</p>
+        <button class="button" [routerLink]="['/book',book.id_book]">Ver mas...</button>
+    </div>
+</div>

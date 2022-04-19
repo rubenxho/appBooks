@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AuthService } from 'src/app/auth/services/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +11,7 @@ export class MenuComponent {
   @ViewChild('menuResponsive') menuResponsive:ElementRef;
   public menuDesplegado:Boolean;
 
-  constructor() { }
+  constructor(public authService: AuthService) { }
 
   desplegarMenu(){
     this.menuResponsive.nativeElement.classList.toggle('mostrar')

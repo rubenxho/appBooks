@@ -1,0 +1,35 @@
+<section class="mainContainer localContainer">
+    
+    <article class="cardContainer">
+
+        <figure class="image">
+            <img class="image__photo" src="{{book?.image}}" alt="picture">
+        </figure>
+
+        <div class="containerInfo">
+            <div class="info">
+                <p>Id_Book:</p>
+                <p>{{book?.id_book}}</p>
+            </div>
+            <div class="info">
+                <p>Nombre:</p>
+                <p>{{book?.name}}</p>
+            </div>
+            <div class="info">
+                <p>isbn:</p>
+                <p>{{book?.isbn}}</p>
+            </div>
+            <div class="info">
+                <p>Nombre Autor:</p>
+                <p>{{book?.author.first_name}}</p>
+            </div>
+            <div class="info">
+                <p>Apellido Autor:</p>
+                <p>{{book?.author.last_name}}</p>
+            </div>
+        </div>
+
+        <button class="button" on-click="back()">Regresar</button>
+    </article>
+
+</section> 

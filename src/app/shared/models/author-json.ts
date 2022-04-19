@@ -12,5 +12,6 @@ export class AuthorJson {
         this.found= found;
         this.created= created;
         this.updated= updated;
+        this.data;
     }
 }

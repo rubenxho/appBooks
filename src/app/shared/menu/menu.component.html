@@ -6,10 +6,11 @@
         </div>
         
         <div class="navbar_options" #menuResponsive>
-            <!-- <a class="options_text" on-click="desplegarMenu()"> Home</a> -->
-            <a class="options_text" routerLink="/login" routerLinkActive="options_text--active" on-click="desplegarMenu()"> Login</a>
-            <a class="options_text" routerLink="/register" routerLinkActive="options_text--active" on-click="desplegarMenu()"> Registro</a>
-            <!-- <a class="options_text" on-click="desplegarMenu()"> Contacto</a> -->
+            <a *ngIf="!authService.isLogged" class="options_text" routerLink="/login" routerLinkActive="options_text--active" on-click="desplegarMenu()"> Login</a>
+            <a *ngIf="!authService.isLogged" class="options_text" routerLink="/login/register" routerLinkActive="options_text--active" on-click="desplegarMenu()"> Registro</a>
+            <a *ngIf="authService.isLogged" class="options_text" routerLink="/book" routerLinkActive="options_text--active" on-click="desplegarMenu()"> Books</a>
+            <a *ngIf="authService.isLogged" class="options_text" routerLink="/book/add-book" routerLinkActive="options_text--active" on-click="desplegarMenu()"> AddBook</a>
+            <a *ngIf="authService.isLogged" class="options_text" routerLink="/book/update-book" routerLinkActive="options_text--active" on-click="desplegarMenu()"> UpdateBook</a>
         </div>
 
         <div class="navbar_icon">

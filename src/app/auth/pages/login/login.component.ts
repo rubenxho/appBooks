@@ -39,7 +39,7 @@ export class LoginComponent{
       else{
         this.authService.isLogged=true;
         this.authService.author=data.data[0]
-          // this.router.navigate(['/login']) -- > ruta home con usuario
+          this.router.navigate(['/book']) 
       }
     })
 

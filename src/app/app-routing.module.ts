@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path:'', 
-    loadChildren: () => import('./auth/auth.module').then( module => module.AuthModule)
-  },
+  {path:'login', loadChildren: () => import('./auth/auth.module').then( module => module.AuthModule)},
+  {path:'book', loadChildren: () => import('./book/book.module').then(module => module.BookModule)},
+  {path:'**', redirectTo: 'login'}
 ];
 
 @NgModule({

@@ -1,0 +1,63 @@
+.localContainer{
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url("../../../../assets/img/books.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Estilos buscador */
+.searchContainer{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputContainer{
+    width: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.barra{
+    width: 200px;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid rgba(128, 128, 128, 0.9);;
+    color: black;
+    padding-left: 20px;
+    outline: none;
+}
+
+.icon{
+    position: absolute;
+    color: #4f5b66;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+/* Estilos contenedor tarjeta */
+.cardContainer{
+    padding: 50px 0px;
+    margin: 0px 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:900px) {
+    
+    .cardContainer{
+        margin: 0px;
+    }
+}

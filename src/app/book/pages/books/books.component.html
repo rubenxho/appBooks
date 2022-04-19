@@ -1,0 +1,24 @@
+<section class="mainContainer localContainer">
+
+    <article class="searchContainer">
+        <div class="inputContainer">
+            <input class="barra" placeholder="Buscar por id..." on-keyup.enter="getBook(inputBarra.value)"#inputBarra>
+            <button class="icon" type="reset" on-click="getBook(inputBarra.value)"><i class="fa fa-search"></i></button>
+        </div>
+    </article>
+
+    <article class="cardContainer">
+
+        <ng-container *ngIf="books.length > 0 ; else noBooks">
+            <ng-container *ngFor="let book of books; let index= index">
+                <app-card-book [book]="book"> </app-card-book>
+            </ng-container>
+        </ng-container>    
+
+        <ng-template #noBooks>
+            <h1 style="color: white;">No existen libros disponibles...</h1>
+        </ng-template>
+
+    </article>
+
+</section> 
