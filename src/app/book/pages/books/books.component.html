@@ -11,7 +11,7 @@
 
         <ng-container *ngIf="books.length > 0 ; else noBooks">
             <ng-container *ngFor="let book of books; let index= index">
-                <app-card-book [book]="book"> </app-card-book>
+                <app-card-book [book]="book" (modifyEvent)="modify($event)"> </app-card-book>
             </ng-container>
         </ng-container>    
 

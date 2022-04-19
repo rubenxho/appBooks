@@ -1,9 +1,16 @@
 <div class="card"> 
     <figure class="image">
-        <img class="image__photo" src="{{book.image}}" alt="picture">
+        <img class="image__photo" src="{{book.image | image}}" alt="picture">
     </figure>
     <div class="card__body">
-        <p class="card__title">{{book.name}}</p>
-        <button class="button" [routerLink]="['/book',book.id_book]">Ver mas...</button>
+        <div class="card__info">
+            <p class="card__title">{{book.name}}</p>
+
+            <a *ngIf="!book.favorite" on-click="modify(true, book.id_book)"><i class="fa-regular fa-bookmark icon"></i></a>
+            <a *ngIf="book.favorite" on-click="modify(false, book.id_favorite)"><i class="fa-solid fa-bookmark icon--fill"></i></a>
+            
+        </div>
+        
+        <button class="button" [routerLink]="['/book/detail',book.id_book]">Ver mas...</button>
     </div>
 </div>

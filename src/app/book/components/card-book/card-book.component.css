@@ -33,6 +33,12 @@
     gap: 5px;
 }
 
+.card__info{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 3px;
+}
+
 .card__title{
     color: var(--secondaryColor);
     font-size: 16px;
@@ -54,4 +60,12 @@
 
 .button:active{
     background-color: var(--primaryColorShadow);
+}
+
+.icon{
+    color: white;
+}
+
+.icon--fill{
+    color: white;
 }

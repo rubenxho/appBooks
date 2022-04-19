@@ -1,8 +1,6 @@
-<section class="mainContainer">
-
-    <p>add-book works!</p>
-
-</section> 
+<section class="mainContainer localContainer">
+    <app-form [event]="event" [hidden]="hidden" [message]="message" (formEvent)="add($event)"></app-form>
+</section>    
 
 
 

@@ -1,0 +1,17 @@
+<section class="mainContainer localContainer">
+    <article class="cardContainer">
+
+        <ng-container *ngIf="books.length > 0 ; else noBooks">
+            <ng-container *ngFor="let book of books; let index= index">
+                <app-card-book [book]="book" (modifyEvent)="modify($event)"> </app-card-book>
+            </ng-container>
+        </ng-container>    
+
+        <ng-template #noBooks>
+            <h1 style="color: white;">No existen libros favoritos...</h1>
+        </ng-template>
+
+    </article>
+
+</section> 
+

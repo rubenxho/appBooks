@@ -1,11 +1,11 @@
-import { Author } from "./author";
+import { User } from "./user";
 
-export class AuthorJson {
+export class AuthJson {
     public error: string;
     public found: boolean;
     public created: boolean;
     public updated: boolean;
-    public data: Author[];
+    public data: User[];
 
     constructor(error:string, found: boolean, created: boolean, updated: boolean){
         this.error= error;

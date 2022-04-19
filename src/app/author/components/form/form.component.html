@@ -1,0 +1,15 @@
+<form class="form" [formGroup]="myForm" autocomplete="off">
+    <div class="title">
+        <h1><i class="fa-solid fa-user-ninja"></i> {{event}}</h1>
+    </div>
+    <div class="field">
+        <input *ngIf="event==='Modificar'" type="number" class="field__text" type="number" placeholder="Id Author" formControlName="id_author"> 
+        <input class="field__text" placeholder="First Name" formControlName="first_name"> 
+        <input class="field__text" placeholder="Last Name" formControlName="last_name">  
+    </div>
+    <div class="event">
+        <p *ngIf="hidden" class="alert">{{message}}</p>
+        <button class="button" type="reset" on-click="confirm()">{{event}}</button>
+    </div>
+</form>
+

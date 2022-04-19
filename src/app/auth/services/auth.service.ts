@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
-import { Author } from '../../shared/models/author';
-import { AuthorJson } from '../../shared/models/author-json';
+import { User} from '../../shared/models/user';
+import { AuthJson } from '../../shared/models/auth-json';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,18 +11,18 @@ export class AuthService {
 
   private url:string = 'http://localhost:3000'
   public isLogged:boolean = false;
-  public author: Author;
+  public user: User;
 
   constructor(private http: HttpClient) { }
 
-  login(author: Author): Observable<AuthorJson>{
+  login(user: User): Observable<AuthJson>{
     let url= `${this.url}/login`
-    return this.http.post<AuthorJson>(url,author)
+    return this.http.post<AuthJson>(url,user)
   }
 
-  register(author: Author): Observable<AuthorJson>{
-    let url= `${this.url}/author`
-    return this.http.post<AuthorJson>(url,author)
+  register(user: User): Observable<AuthJson>{
+    let url= `${this.url}/register`
+    return this.http.post<AuthJson>(url,user)
   }
 
  

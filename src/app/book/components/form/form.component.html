@@ -1,0 +1,16 @@
+<form class="form" [formGroup]="myForm" autocomplete="off">
+    <div class="title">
+        <h1><i class="fa-solid fa-book"></i> {{event}}</h1>
+    </div>
+    <div class="field">
+        <input *ngIf="event==='Modificar'" type="number" class="field__text" type="number" placeholder="Id Book" formControlName="id_book"> 
+        <input class="field__text" type="number" placeholder="Id Author" formControlName="id_author"> 
+        <input class="field__text" placeholder="name" formControlName="name"> 
+        <input class="field__text" placeholder="isbn" formControlName="isbn"> 
+        <input class="field__text" placeholder="image" formControlName="image"> 
+    </div>
+    <div class="event">
+        <p *ngIf="hidden" class="alert">{{message}}</p>
+        <button class="button" type="reset" on-click="confirm()">{{event}}</button>
+    </div>
+</form>

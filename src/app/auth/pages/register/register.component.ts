@@ -1,8 +1,9 @@
 import { Component} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Author } from '../../../shared/models/author';
-import { AuthorJson } from '../../../shared/models/author-json';
+import { User } from 'src/app/shared/models/user';
+
+import { AuthJson } from '../../../shared/models/auth-json';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -20,16 +21,16 @@ export class RegisterComponent{
   }
 
   register(){
-    const author: Author = this.myForm.value 
+    const user: User = this.myForm.value 
 
-    for(let property in author){
-      if(author[property]==="" || author[property]===null){
+    for(let property in user){
+      if(user[property]==="" || user[property]===null){
         this.hidden=true;
         return
       }
     }
 
-    this.authService.register(author).subscribe((data: AuthorJson)=>{
+    this.authService.register(user).subscribe((data: AuthJson)=>{
       if(data.error){
         this.hidden=true;
       }else{

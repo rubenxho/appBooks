@@ -1,0 +1,25 @@
+<section class="mainContainer localContainer">
+
+    <article class="searchContainer">
+        <div class="inputContainer">
+            <input class="barra" placeholder="Buscar por id..." on-keyup.enter="getAuthor(inputBarra.value)"#inputBarra>
+            <button class="icon" type="reset" on-click="getAuthor(inputBarra.value)"><i class="fa fa-search"></i></button>
+        </div>
+    </article>
+
+    <article class="cardContainer">
+
+        <ng-container *ngIf="authors.length > 0 ; else noAuthors">
+            <ng-container *ngFor="let author of authors; let index= index">
+                <app-card-author [author]="author"></app-card-author>
+            </ng-container>
+        </ng-container>    
+
+        <ng-template #noAuthors>
+            <h1 style="color: white;">No existen Autores disponibles...</h1>
+        </ng-template>
+
+    </article>
+
+</section> 
+
